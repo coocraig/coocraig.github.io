@@ -8,6 +8,7 @@
 .img-comp-container {
   position: relative;
   height: 806px; /*should be the same height as the images*/
+  width: 70%
 }
 
 .img-comp-img {
@@ -27,12 +28,20 @@
   z-index:9;
   cursor: ew-resize;
   /*set the appearance of the slider:*/
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   background-color: white;
-  opacity: 0.7;
+  opacity: ;
   border-radius: 50%;
 }
+    
+    .vis-container {
+        overflow: visible;
+    }
+    
+    .inline{
+        display: inline-block;
+    }
 </style>
 <script>
 function initComparisons() {
@@ -115,19 +124,25 @@ function initComparisons() {
 </head>
 <body>
 
-<h1>Compare Two Images</h1>
-
-<p>Click and slide the blue slider to compare two images:</p>
-
-<div class="img-comp-container">
-  <div class="img-comp-img">
-    <img src="2020_population_dist.png" width="1139.775" height="806">
-  </div>
-  <div class="img-comp-img img-comp-overlay">
-    <img src="2000_population_dist.png" width="1139.775" height="806">
-  </div>
-</div>
-
+<center><h1>Has Montana Experienced Urban Sprawl in the 21st Century?</h1>
+    <p>Urban sprawl is popularly defined as an uncontrolled expansion of an urban area, mostly to previously undeveloped land near a city.</p><a href="https://sedac.ciesin.columbia.edu/data/set/gpw-v4-population-count-rev11">Population data made available by Columbia University</a>, <a href="https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html">Shape file made available by the US Census Bereau</a><hr>
+    <h3>Drag the White Circle on the Map to see how Montana's population density has changed from 2000 to 2020 <br>(Anything to the right of the circle will be 2020 data, anything to the left will be data from 2000)</h3></center>
+<center><div class = "vis-container">
+    <div class="img-comp-container">
+      <div class="img-comp-img">
+        <img src="2020_population_dist.png" width="1139.775" height="806">
+      </div>
+      <div class="img-comp-img img-comp-overlay">
+        <img src="2000_population_dist.png" width="1139.775" height="806">
+      </div>
+        <img src="legend.png" height = auto width = "10%" class = "inline">
+    </div>
+     <img src="legend.png" height = auto width = "10%" class = "inline">
+</div></center>
+    <center><div>
+    <img src="bozeman_2000.png" height = auto width = "30%">
+    <img src="bozeman_2020.png" height = auto width = "30%">
+    </div></center>
 <script>
 /*Execute a function that will execute an image compare function for each element with the img-comp-overlay class:*/
 initComparisons();

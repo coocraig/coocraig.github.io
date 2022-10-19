@@ -15,7 +15,7 @@ div.image {
 }
 
 div.before {
-    width: 50%;
+    width: 100%;
     background-image: url("2000_population_dist.png");
     z-index: 2;
 }
@@ -38,7 +38,6 @@ input.slider {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
-    transition: 0.25s all ease-in-out;
     -moz-transition: 0.25s all ease-in-out;
     -webkit-transition: 0.25s all ease-in-out;
     z-index: 4;
