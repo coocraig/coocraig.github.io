@@ -1,0 +1,72 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: hsla(0, 1%, 86%, 0.603);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .message {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 1%;
+
+  }
+
+  .info {
+    margin-top: 75px;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .image-container {
+    margin: 20px;
+    position: relative;
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+  }
+  
+  .image-container .overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .image-container:hover img {
+    filter: blur(3px);
+  }
+  
+  .image-container:hover .overlay {
+    opacity: 1;
+  }
